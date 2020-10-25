@@ -1,17 +1,24 @@
 @inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+<div class="main_container">
 
-    <div class="main">
-        <div class="top-row px-4">
-            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
-        </div>
+    <!--Side NAvigation Begins-->
+    <div class="col-md-3 left_col">
+       <SideNavBar/>
+    </div> 
+    <!--Side Navigation Endst-->
 
-        <div class="content px-4">
-            @Body
-        </div>
+    <!--Top NAv Begins-->
+ <div class="top_nav">
+     <TopNavBar />
+</div>
+<!--Top NAv Ends-->
+
+<!-- page content begins-->
+    <div class="right_col" role="main">
+        @Body
     </div>
+<!-- /page content Ends -->
+
+<FootBar/>
 </div>
